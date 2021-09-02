@@ -1,0 +1,227 @@
+body,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  overflow-x:hidden;
+}
+
+a {
+  color:inherit;
+  text-decoration: none;
+}
+
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Rozha One', serif;
+}
+
+.con {
+  max-width: 1920px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/*-----------------------------------navigation bar--------------------------------------------*/
+.navigation {
+  width:70px;
+  height: 350px;
+  position: fixed;
+  right:40px;
+  top:50%;
+  transform:translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 1;
+}
+
+.navigation > .btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navigation > .btn > div {
+  margin-top: 5px;
+  border:1px solid black;
+  width: 30px;
+  height: 30px;
+  transform:rotate(-60deg);
+}
+
+.navigation > .btn:hover > div {
+  border:2px solid black;
+}
+
+.navigation > .btn:nth-child(even) > div {
+  transform:rotate(60deg);
+}
+
+.navigation > .btn > div.active {
+  background: linear-gradient(92.27deg, rgba(0, 0, 0, 0) -0.24%, #000000 100.4%);
+}
+
+
+/*-----------------------------------section-1--------------------------------------------*/
+.section-1 {
+  height: 100vh;
+  background-color: #999;
+}
+
+header {
+  width: 100%;
+  height: 150px;
+  background-color: #777;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 100px;
+  padding-left: 100px;
+}
+
+.h-logo {
+  background-color: #999;
+}
+
+/*       process 버튼        */
+.h-process-btn {
+  background-color: #666;
+}
+
+.h-process-btn > a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.h-process-btn > a > img {
+  width:64px;
+  height: 64px;
+  transition:transform 1s;
+  z-index:1;
+}
+
+.h-process-btn > a:hover > span {
+  color:#383D3F;
+}
+
+.h-process-btn > a > span::after {
+  content:"";
+  position: absolute;
+  width:0;
+  height: 12px;
+  background-color: #383D3F;
+  top:51px;
+  left:43px;
+  transition:width 1s;
+}
+
+
+.h-process-btn > a:hover > img {
+  transform:rotate(180deg)
+}
+
+.h-process-btn > a:hover > span {
+  color:black;
+}
+
+.h-process-btn > a:hover > span::after {
+  width:100px;
+}
+
+
+/*       main-img        */
+.main-section {
+  background-color: #666;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  width: 100%;
+}
+
+.mian-img-box {
+  background-color: #555;
+}
+
+.plusbg1 {
+  top:50px;
+  left:50px;
+}
+
+.plusbg2 {
+  bottom:170px;
+  right:200px;
+}
+
+.plustext1 {
+  font-size: 43px;
+  line-height :56px;
+  top:63px;
+  left:80px;
+  z-index: 1;
+}
+
+.plustext2 {
+  font-size: 43px;
+  line-height :48px;
+  bottom:160px;
+  right:-40px;
+  z-index: 1;
+}
+
+
+
+
+/*       scrolldown        */
+footer {
+  width: 100%;
+  height: 160px;
+  background-color: #999;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+
+.scrolldown {
+  position: absolute;
+  animation:dungdung .9s none infinite alternate;
+}
+
+@keyframes dungdung {
+  0% {
+    bottom:0;
+  }
+  100% {
+    bottom:30px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------section-2--------------------------------------------*/
+.section-2 {
+  height: 100vh;
+  background-color: #888;
+}

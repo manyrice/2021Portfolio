@@ -1,12 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MinheePark Portfolio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Rozha+One&display=swap');
+  </style>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.9/tailwind.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+  <script src="script/index.js" defer></script>
 </head>
+
 <body>
-  안뇽
+  <div class="con">
+
+
+    <!----------------------네비게이션 바---------------------->
+    <div class="navigation">
+
+      <a href="#section1" class="btn btn-1">
+        <span>HOME</span>
+        <div></div>
+      </a>
+
+      <a href="#section2" class="btn btn-2">
+        <span>ABOUT</span>
+        <div></div>
+      </a>
+
+      <a href="#section3" class="btn btn-3">
+        <span>SKILL</span>
+        <div></div>
+      </a>
+
+      <a href="#section4" class="btn btn-4">
+        <span>PORTFOLIO</span>
+        <div></div>
+      </a>
+
+      <a href="#section5" class="btn btn-5">
+        <span>CONTACT</span>
+        <div></div>
+      </a>
+
+    </div>
+
+
+
+
+    <!----------------------section-1---------------------->
+    <section class="section section-1" id="section1">
+      <!--헤더-->
+      <header>
+        <div class="h-logo">
+          <a href="index.html"><img src="images/h-logo.png" alt="logo"></a>
+        </div>
+
+        <div class="h-process-btn">
+          <a href="#">
+            <img src="images/h-process.png" alt="process">
+            <span>Process view</span>
+          </a>
+        </div>
+      </header>
+
+      <!--메인섹션-->
+      <div class="main-section">
+
+        <div class="mian-img-box relative">
+
+          <!--좌측 plus1 이미지-->
+          <img class="plusbg1 absolute" src="images/+bg1.png" alt="plusbg1">
+          <span class="plustext1 absolute">Design<br> & Publishing</span>
+          <!--우측 plus2 이미지-->
+          <img class="plusbg2 absolute" src="images/+bg2.png" alt="plusbg2">
+          <span class="plustext2 absolute">Hi,<br>I’M MINHEE.</span>          
+          <!--흐릿한 이미지-->
+          <img class="absolute top-10 left-10 mousemove-effect-1-el" style="filter: blur(1.5rem);"
+            src="images/main-blur.png" alt="mainblurimg" data-mousemove-effect1-hor-res="0.01"
+            data-mousemove-effect1-ver-res="0.01">
+          <!--뚜렷한 이미지-->
+          <img class="relative mousemove-effect-1-el" src="images/main.png" alt="mainimg"
+            data-mousemove-effect1-hor-res="-0.01" data-mousemove-effect1-ver-res="-0.01">
+            
+        </div>     
+      </div>
+
+      <!--fotter의 scrolldown 애니메이션-->
+      <footer>
+        <div class="scrolldown">
+          <img src="https://i.postimg.cc/K86rDsHV/Group-2025.png" alt="">
+        </div>
+      </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+    <!----------------------section-2---------------------->
+    <section class="section section-2" id="section2">
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+  </div>
 </body>
+
 </html>
