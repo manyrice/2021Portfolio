@@ -1,3 +1,42 @@
+console.clear();
+
+
+// 이미지로디드
+$("body").imagesLoaded(function () {
+  // 이 부분을 0으로 바뀌면 로딩화면이 안보일 때가 있습니다. 억지로라도 로딩화면을 보여주려면 이 부분을 남겨두세요. 500이 적당합니다.
+  const fakeLoadingMilliSeconds = 1900;
+  setTimeout(function () {
+    Fullpage__init();
+    $(".loading").remove();
+  }, fakeLoadingMilliSeconds);
+});
+
+
+// 풀페이지
+function Fullpage__init() {
+  new fullpage('#fullpage', {
+    scrollOverflow:true,
+    verticalCentered:false,
+    css3:false,
+    navigation:true,
+    scrollingSpeed: 1000,
+    //인터넷에서 찾은..텍스트 커서 잡히기?
+    scrollOverflowOptions: {
+    	preventDefault: false
+    },
+    menu: ".top-bar .menu-box-1 > ul"
+  });
+
+  // 기존 섹션을 다시 활성화 하여, 최초에도 애니메이션이 발동 하도록
+  const $current = $('#fullpage .section.fp-section.active');
+  $current.removeClass('active');
+  setTimeout(function() {
+    $current.addClass('active');
+  });
+}
+Fullpage__init();
+
+
 // 메인화면 마우스움직임 효과
 function MainMouseMoveEffect() {
 
@@ -60,8 +99,36 @@ MousemoveEffect1__init();
 };
 MainMouseMoveEffect();
 
-// 네비게이션 바
-$('.navigation > a').click(function() {
-  $(this).find('> div').addClass('active');
-  $(this).siblings('a > div')
-});
+
+//포트폴리오 스와이퍼 슬라이드
+function PortfolioSlider__init() {
+  const swiper = new Swiper('.pf-slide .swiper-container', {
+    loop: true,
+    navigation: {
+      nextEl: ".btn-next",
+      prevEl: ".btn-prev",
+    },
+    on: {
+      slideChange: function() {
+        $('.pf-slide').attr('data-swiper-slide-index', this.realIndex);
+      }
+    }
+  });
+}
+PortfolioSlider__init();
+
+
+//아트웍 스와이퍼 슬라이드
+function ArtworkSlider__init() {
+  const swiper = new Swiper('.aw-slide .swiper-container', {
+    slidesPerView:4.5,
+    spaceBetween:50,
+    loop: false,
+    on: {
+      slideChange: function() {
+        $('.aw-slide').attr('data-swiper-slide-index', this.realIndex);
+      }
+    }
+  });
+}
+ArtworkSlider__init();
