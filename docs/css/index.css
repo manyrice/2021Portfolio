@@ -50,6 +50,14 @@ a {
   width:100px;
 }
 
+.loading::after {
+  content:"wait please";
+  color:white;
+  position: absolute;
+  top:57%;
+  font-size: 20px;
+}
+
 /* fullpage navigation 커스텀 시작 */ 
 #fp-nav {
   width: 100px;
@@ -478,53 +486,24 @@ footer.scrolldown {
   text-align:center;
 }
 
-.progress > ul > li > .bar {
+.chart-1 {
   position:relative;
+  display:inline-block;
 }
 
-.progress > ul > li > .bar > svg > circle {
-  fill:none;
-  stroke-width:15;
-  stroke:#494949;
-  position:absolute;
-}
-
-.progress > ul > li > .bar > span {
+.chart-1 strong {
+  font-size: 25px;
   position:absolute;
   top:50%;
   left:50%;
   transform:translate(-50%, -50%);
-  font-size:35px;
-  transition:.3s;
+  transition:font-size .3s;
 }
 
-.progress > ul > li > .bar:hover > span {
-  transform:scale(1.2) translate(-40%, -40%);
+.chart-1:hover strong {
+  font-size: 35px;
 }
 
-.progress > ul > li > .bar > svg > circle:nth-child(2) {
-  stroke:blue;
-  stroke-width:20;
-  stroke-linecap:round;
-}
-
-.progress > ul > .il-icon > .bar > svg > circle:nth-child(2) {
-  stroke:gold;
-  stroke-dashoffset: 500;
-  stroke-dasharray: 200;
-}
-
-.progress > ul > .fg-icon > .bar > svg > circle:nth-child(2) {
-  stroke:violet;
-  stroke-dashoffset: 500;
-  stroke-dasharray: 200;
-}
-
-.progress > ul > .pu-icon > .bar > svg > circle:nth-child(2) {
-  stroke:greenyellow;
-  stroke-dashoffset: 500;
-  stroke-dasharray: 200;
-}
 
 /*-----------------------------------section-4 인트로--------------------------------------------*/
 .section-4 {
@@ -603,7 +582,7 @@ footer.scrolldown {
 }
 
 .btn-view:hover {
-  background-color: pink;
+  background-color: #AD1C24;
   color:white;
 }
 
@@ -817,22 +796,15 @@ footer.scrolldown {
 }
 
 .sns-box {
-  width: 250px;
+  width: 200px;
   height: 40px;
   position:absolute;
   bottom:-10px;
   left:0;
 }
 
-.sns-box > ul > li > a {
-  display:flex;
-  width: 35px;
-  height: 35px;
-  background-color: #fff;
-  border-radius:18px;
-  font-size:20px;
-  justify-content:center;
-  align-items:center;
+.sns-box > ul > li:hover > a > img {
+  transform:scale(1.2);
 }
 
 .together {
