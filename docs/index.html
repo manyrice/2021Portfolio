@@ -51,7 +51,7 @@
   <div class="site-wrap">
     <div id="fullpage">
       <!-----------------------------section-1 메인화면----------------------------->
-      <section class="section section-1 relative" data-tooltip="HOME">
+      <section class="section section-1 relative" data-anchor="section-1" data-tooltip="HOME">
         <div class="con">
           <header>
             <div class="h-logo">
@@ -109,7 +109,7 @@
       </section>
 
       <!-----------------------------section-2 어바웃미----------------------------->
-      <section class="section section-2 relative" data-tooltip="ABOUT ME">
+      <section class="section section-2 relative" data-anchor="section-2" data-tooltip="ABOUT ME">
         <div class="con">
 
           <div class="aboutme main-text">
@@ -121,23 +121,23 @@
             <div class="relative">
               <!--필름지-->
               <div class="filmji img-box absolute">
-                <img src="images/filmji.png" alt="">
+                <img src="images/filmji.png" alt="filmji">
               </div>
               <!--프로필사진1-->
               <div class="profil profil-1 img-box absolute">
-                <img src="https://picsum.photos/id/238/510/270" alt="">
+                <img src="https://picsum.photos/id/238/510/270" alt="profil1">
               </div>
               <!--프로필사진2-->
               <div class="profil profil-2 img-box absolute">
-                <img src="https://picsum.photos/id/234/510/270" alt="">
+                <img src="https://picsum.photos/id/234/510/270" alt="profil2">
               </div>
               <!--프로필사진3-->
               <div class="profil profil-3 img-box absolute">
-                <img src="https://picsum.photos/id/220/510/270" alt="">
+                <img src="https://picsum.photos/id/220/510/270" alt="profil3">
               </div>
               <!--필름-->
               <div class="film img-box absolute">
-                <img src="images/film.png" alt="">
+                <img src="images/film.png" alt="film">
               </div>
             </div>
           </div>
@@ -242,7 +242,7 @@
       </section>
 
       <!-----------------------------section-3 스킬----------------------------->
-      <section class="section section-3 relative" data-tooltip="SKILLS">
+      <section class="section section-3 relative" data-anchor="section-3" data-tooltip="SKILLS">
         <div class="con">
           <div class="section-3-bg img-box">
             <div class="flex flex-col">
@@ -387,7 +387,7 @@
                           타블렛을 이용한 간단한 디지털드로잉 작업이 가능하여<br>
                           넓은 방면으로 원하는 작업물을 구현해 낼 수 있습니다.
                         </div>
-                        <div class="chart-1">
+                        <div class="chart chart-1">
                           <strong></strong>
                         </div>
                       </li>
@@ -400,7 +400,7 @@
                           아이소메트릭 3D 그래픽 일러스트 작업을 이용하여<br>
                           보다 더 현실적인 아트웍을 제작할 수 있습니다.
                         </div>
-                        <div class="chart-1">
+                        <div class="chart chart-2">
                           <strong></strong>
                         </div>
                       </li>
@@ -413,7 +413,7 @@
                           컴포넌트, 오토레이아웃 기능을 사용하여<br>
                           보다 더 신속한 작업을 할 수 있습니다.
                         </div>
-                        <div class="chart-1">
+                        <div class="chart chart-3">
                           <strong></strong>
                         </div>
                       </li>
@@ -426,7 +426,7 @@
                           간단한 웹퍼블리싱과 동적효과를 구현할 수 있고,<br>
                           간단한 JQUERY를 적용할 수 있습니다.
                         </div>
-                        <div class="chart-1">
+                        <div class="chart chart-4">
                           <strong></strong>
                         </div>
                       </li>
@@ -445,10 +445,10 @@
       </section>
 
       <!-----------------------------section-4 인트로----------------------------->
-      <section class="section section-4 relative bg-black" data-tooltip="INTRO"></section>
+      <section class="section section-4 relative bg-black" data-anchor="section-4" data-tooltip="INTRO"></section>
 
       <!-----------------------------section-5 포트폴리오----------------------------->
-      <section class="section section-5 relative bg-black" data-tooltip="PORTFOLIO">
+      <section class="section section-5 relative bg-black" data-anchor="section-5" data-tooltip="PORTFOLIO">
         <div class="con">
 
           <!-- 커튼 이미지 -->
@@ -472,7 +472,7 @@
                 <div class="swiper-slide pf-slide-1">
                   <div>
                     <div class="flex">
-                      <div class="pf-slide-img1 img-box">
+                      <div class="pf-slide-img img-box">
                         <img src="images/pf-slide1.png" alt="pf-slide1">
                       </div>
                       <span class="pf-slide-maintext-t">Iloom UI/UX Design</span>
@@ -482,7 +482,8 @@
                           개봉일 : 2021. 08. 50<br>
                           제작기간 : 4WEEKS
                         </span>
-                        <a class="btn-view" href="https://manyrice.github.io/portfolio-iloom/portfolio/work-1/" target='_blank'>
+                        <a class="btn-view" href="https://manyrice.github.io/portfolio-iloom/portfolio/work-1/"
+                          target='_blank'>
                           View Detail
                         </a>
                       </div>
@@ -495,17 +496,18 @@
                 <div class="swiper-slide pf-slide-2">
                   <div>
                     <div class="flex">
-                      <div class="pf-slide-img2 img-box">
+                      <div class="pf-slide-img img-box">
                         <img src="images/pf-slide2.png" alt="pf-slide2">
                       </div>
-                      <span class="pf-slide-maintext-t">BangGa BangGa</span>
+                      <span class="pf-slide-maintext-t">BangGAWa</span>
                       <div class="pf-text-box">
                         <span>
                           장르 : UI/UX DESIGN<br>
-                          개봉일 : 2021. 08. ??<br>
+                          개봉일 : 2021. 08. 50<br>
                           제작기간 : 4WEEKS
                         </span>
-                        <a class="btn-view" href="#">
+                        <a class="btn-view" href="https://manyrice.github.io/portfolio-iloom/portfolio/work-1/"
+                          target='_blank'>
                           View Detail
                         </a>
                       </div>
@@ -518,46 +520,24 @@
                 <div class="swiper-slide pf-slide-3">
                   <div>
                     <div class="flex">
-                      <div class="pf-slide-img3 img-box">
+                      <div class="pf-slide-img img-box">
                         <img src="images/pf-slide3.png" alt="pf-slide3">
                       </div>
-                      <span class="pf-slide-maintext-t">Iloom UI/UX Design</span>
+                      <span class="pf-slide-maintext-t">Say Good Bye</span>
                       <div class="pf-text-box">
                         <span>
                           장르 : UI/UX DESIGN<br>
                           개봉일 : 2021. 08. 50<br>
                           제작기간 : 4WEEKS
                         </span>
-                        <a class="btn-view" href="#">
+                        <a class="btn-view" href="https://manyrice.github.io/portfolio-iloom/portfolio/work-1/"
+                          target='_blank'>
                           View Detail
                         </a>
                       </div>
                     </div>
                     <div class="pf-slide-maintext-b">
                       Chapter 3
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide pf-slide-4">
-                  <div>
-                    <div class="flex">
-                      <div class="pf-slide-img4 img-box">
-                        <img src="images/pf-slide4.png" alt="pf-slide4">
-                      </div>
-                      <span class="pf-slide-maintext-t">Iloom UI/UX Design</span>
-                      <div class="pf-text-box">
-                        <span>
-                          장르 : UI/UX DESIGN<br>
-                          개봉일 : 2021. 08. 50<br>
-                          제작기간 : 4WEEKS
-                        </span>
-                        <a class="btn-view" href="#">
-                          View Detail
-                        </a>
-                      </div>
-                    </div>
-                    <div class="pf-slide-maintext-b">
-                      Chapter 4
                     </div>
                   </div>
                 </div>
@@ -568,7 +548,7 @@
       </section>
 
       <!-----------------------------section-6 아트웍----------------------------->
-      <section class="section section-6 relative bg-black" data-tooltip="ARTWORK">
+      <section class="section section-6 relative bg-black" data-anchor="section-6" data-tooltip="ARTWORK">
         <div class="con">
 
           <!--아트웍 메인텍스트-->
@@ -644,7 +624,7 @@
       </section>
 
       <!-----------------------------section-7 앤딩크레딧----------------------------->
-      <section class="section section-7 relative bg-black" data-tooltip="ENDING">
+      <section class="section section-7 relative bg-black" data-anchor="section-7" data-tooltip="ENDING">
         <div class="con">
           <MARQUEE class="ending-box" direction="up" scrollamount="12">
 
@@ -675,7 +655,7 @@
       </section>
 
       <!-----------------------------section-8 컨텍트----------------------------->
-      <section class="section section-8 relative bg-black" data-tooltip="CONTACT">
+      <section class="section section-8 relative bg-black" data-anchor="section-8" data-tooltip="CONTACT">
         <div class="con">
           <!--컨택트 배경이미지-->
           <div class="section-8-bg">
@@ -705,10 +685,13 @@
 
                   <div class="sns-box">
                     <ul class="flex justify-between items-center">
-                      <li><a href="https://ricemany.tistory.com/" target='_blank'><img src="images/tstory-logo.png" alt="tstory-logo"></a></li>
+                      <li><a href="https://ricemany.tistory.com/" target='_blank'><img src="images/tstory-logo.png"
+                            alt="tstory-logo"></a></li>
                       <li><a href="#" target='_blank'><img src="images/insta-logo.png" alt="insta-logo"></a></li>
-                      <li><a href="https://notefolio.net/PMHartwork" target='_blank'><img src="images/notefolio-logo.png" alt="notefolio-logo"></a></li>
-                      <li><a href="https://www.behance.net/alsgml1966d7dd" target='_blank'><img src="images/behance-logo.png" alt="behance-logo"></a></li>
+                      <li><a href="https://notefolio.net/PMHartwork" target='_blank'><img
+                            src="images/notefolio-logo.png" alt="notefolio-logo"></a></li>
+                      <li><a href="https://www.behance.net/alsgml1966d7dd" target='_blank'><img
+                            src="images/behance-logo.png" alt="behance-logo"></a></li>
                     </ul>
                   </div>
 

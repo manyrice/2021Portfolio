@@ -1,10 +1,10 @@
 console.clear();
 
 
-// 이미지로디드
+// 로딩화면
 $("body").imagesLoaded(function () {
   // 이 부분을 0으로 바뀌면 로딩화면이 안보일 때가 있습니다. 억지로라도 로딩화면을 보여주려면 이 부분을 남겨두세요. 500이 적당합니다.
-  const fakeLoadingMilliSeconds = 1900;
+  const fakeLoadingMilliSeconds = 3000;
   setTimeout(function () {
     Fullpage__init();
     $(".loading").remove();
@@ -12,9 +12,10 @@ $("body").imagesLoaded(function () {
 });
 
 // 조절가능
-let chart1AllowRerender = false;
+let chart1AllowRerender = true;
 // 건들지 마시오
 let chart1Rendered = false;
+
 // 풀페이지
 function Fullpage__init() {
   new fullpage('#fullpage', {
@@ -23,30 +24,136 @@ function Fullpage__init() {
     css3: false,
     navigation: true,
     scrollingSpeed: 1000,
-    //인터넷에서 찾은..텍스트 커서 잡히기
+    //텍스트 커서 잡히게 함
     scrollOverflowOptions: {
       preventDefault: false
     },
     menu: ".top-bar .menu-box-1 > ul",
-    afterLoad: function(ignored, destination){
-      if ( destination.anchor == 'section-3') {
-        $(".chart-1").circleProgress({value:0.9});
+    // circle chart 애니메이션
+    afterLoad: function (ignored, destination) {
+      if (destination.anchor == 'section-3') {
+
+        if (chart1AllowRerender) {
+          $(".chart-1").circleProgress({
+            value: 1
+          });
+        } else {
+          if (chart1Rendered == false) {
+            $(".chart-1").circleProgress({
+              value: 1
+            });
+            chart1Rendered = true;
+          }
+        }
+        if (chart1AllowRerender) {
+          $(".chart-2").circleProgress({
+            value: 0.9
+          });
+        } else {
+          if (chart1Rendered == false) {
+            $(".chart-2").circleProgress({
+              value: 0.9
+            });
+            chart1Rendered = true;
+          }
+        }
+        if (chart1AllowRerender) {
+          $(".chart-3").circleProgress({
+            value: 0.8
+          });
+        } else {
+          if (chart1Rendered == false) {
+            $(".chart-3").circleProgress({
+              value: 0.8
+            });
+            chart1Rendered = true;
+          }
+        }
+        if (chart1AllowRerender) {
+          $(".chart-4").circleProgress({
+            value: 0.6
+          });
+        } else {
+          if (chart1Rendered == false) {
+            $(".chart-4").circleProgress({
+              value: 0.6
+            });
+            chart1Rendered = true;
+          }
+        }
+      } else {
+        if (chart1AllowRerender) {
+          $(".chart").circleProgress({
+            value: 0
+          });
+        }
       }
     },
   });
-
 
   $(".chart-1")
     .circleProgress({
       startAngle: -Math.PI / 2,
       reverse: true,
-      value: 0.1,
+      value: 0,
       lineCap: 'round',
       thickness: 15,
       fill: {
-        gradient: ['#ff1e41', '#ff9f8e']
+        gradient: ['#A6FDD6', '#31A8FF']
       }
     })
+    .on(
+      "circle-animation-progress",
+      function (event, progress, stepValue) {
+        $(this).find("strong").text(parseInt(stepValue * 100) + '%');
+      }
+    );
+  $(".chart-2")
+    .circleProgress({
+      startAngle: -Math.PI / 2,
+      reverse: true,
+      value: 0,
+      lineCap: 'round',
+      thickness: 15,
+      fill: {
+        gradient: ['#FF9E01', '#FFF501']
+      }
+    })
+    .on(
+      "circle-animation-progress",
+      function (event, progress, stepValue) {
+        $(this).find("strong").text(parseInt(stepValue * 100) + '%');
+      }
+    );
+  $(".chart-3")
+    .circleProgress({
+      startAngle: -Math.PI / 2,
+      reverse: true,
+      value: 0,
+      lineCap: 'round',
+      thickness: 15,
+      fill: {
+        gradient: ['#E062FF', '#6BE6B5']
+      }
+    })
+    .on(
+      "circle-animation-progress",
+      function (event, progress, stepValue) {
+        $(this).find("strong").text(parseInt(stepValue * 100) + '%');
+      }
+    );
+  $(".chart-4")
+    .circleProgress({
+      startAngle: -Math.PI / 2,
+      reverse: true,
+      value: 0,
+      lineCap: 'round',
+      thickness: 15,
+      fill: {
+        gradient: ['#FF4D00', '#FFD701']
+      }
+    })
+
     .on(
       "circle-animation-progress",
       function (event, progress, stepValue) {
@@ -62,21 +169,8 @@ function Fullpage__init() {
   });
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 // 메인화면 마우스움직임 효과
 function MainMouseMoveEffect() {
-
 
   const $window = $(window);
 
@@ -105,9 +199,6 @@ function MainMouseMoveEffect() {
       const x = (MousemoveEffect1__lastPosX - (windowWidth / 2)) * horRes;
       const y = (MousemoveEffect1__lastPosY - (windowHeight / 2)) * verRes;
       $(node).css('transform', 'translateX(' + x + 'px) translateY(' + y + 'px)');
-
-      console.log("MousemoveEffect1__lastPosX : " + MousemoveEffect1__lastPosX);
-      console.log("MousemoveEffect1__lastPosY : " + MousemoveEffect1__lastPosY);
     });
   }
 

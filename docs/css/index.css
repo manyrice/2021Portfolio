@@ -1,3 +1,7 @@
+html {
+  overflow: hidden;
+}
+
 body,
 ul,
 li {
@@ -39,7 +43,7 @@ a {
   left:0;
   width:100%;
   height:100%;
-  background-color:#151715;
+  background-color:#000;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -54,7 +58,7 @@ a {
   content:"wait please";
   color:white;
   position: absolute;
-  top:57%;
+  top:55%;
   font-size: 20px;
 }
 
@@ -79,10 +83,6 @@ a {
   height: 28px;
   transform:rotate(60deg);
   border-radius:0px;
-}
-/* 왜 안 돼 */
-#fp-nav > ul > li:hover > a > span:nth-child(1) {
-  color:black;
 }
 
 #fp-nav > ul > li:nth-child(even) > a > span:nth-child(2) {
@@ -120,6 +120,10 @@ header {
   align-items: center;
   padding-right: 60px;
   padding-left: 60px;
+}
+
+.h-logo:hover {
+  filter: drop-shadow(5px 5px 1px gray);
 }
 
 /* process 버튼 */
@@ -270,10 +274,18 @@ footer.scrolldown {
   transition:margin-left 1.5s;
 }
 
+.filmji > img {
+  filter: drop-shadow(15px 15px 5px gray);
+}
+
 .film {
   width: 500px;
   top:-68px;
   left:-340px;
+}
+
+.film > img {
+  filter: drop-shadow(3px 3px 5px black);
 }
 
 #fullpage .section.section-2.active .filmji {
@@ -286,6 +298,10 @@ footer.scrolldown {
   margin-left:-500px;
   opacity:0;
   transition:all 1s;
+}
+
+.profil > img {
+  box-shadow: 5px 5px 10px #000;
 }
 
 .profil-1 {
@@ -317,7 +333,7 @@ footer.scrolldown {
 }
 
 .am-text-con * {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Noto Sans KR';
 }
 
 .am-text-r {
@@ -486,22 +502,25 @@ footer.scrolldown {
   text-align:center;
 }
 
-.chart-1 {
+.chart {
   position:relative;
   display:inline-block;
 }
 
-.chart-1 strong {
+.chart > strong {
   font-size: 25px;
   position:absolute;
   top:50%;
   left:50%;
   transform:translate(-50%, -50%);
   transition:font-size .3s;
+  color:#454545;
 }
 
-.chart-1:hover strong {
-  font-size: 35px;
+.chart:hover > strong {
+  font-size: 30px;
+  color:black;
+  filter: drop-shadow(5px 5px 1px #C4C4C4);
 }
 
 
@@ -513,6 +532,7 @@ footer.scrolldown {
   background-attachment: fixed !important;
   height:1500px;
   background-position:center;
+  position: relative;
 }
 
 /*-----------------------------------section-5 포트폴리오--------------------------------------------*/
@@ -540,7 +560,7 @@ footer.scrolldown {
   color:white;
 }
 
-.pf-slide-img1 {
+.pf-slide-img {
   margin-left: 131px;
   width: 370px;
 }
@@ -574,15 +594,14 @@ footer.scrolldown {
 
 .btn-view {
   font-size:23px;
-  background-color: white;
+  border:1px solid #B3866F;
   padding:8px 20px;
-  border-radius:30px;
-  color:black;
+  color:#B3866F;
   margin-top: 20px;
 }
 
 .btn-view:hover {
-  background-color: #AD1C24;
+  background-color: #B3866F;
   color:white;
 }
 
