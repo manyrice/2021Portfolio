@@ -653,17 +653,18 @@
               <div class="contact-slate">
                 <div class="slate-box">
 
-                  <form class="flex flex-col" target="_blank" action="https://formspree.io/f/xknkezwj" method="POST" onsubmit="sendEmailForm(this); return false;">
+                  
+                    <form target="_blank" action="https://formspree.io/f/xknkezwj" onsubmit="sendEmailForm(this); return false;" method="POST" class="flex flex-col">
                     <div class="text-white">Name</div>
-                    <input class="name" autofocus type="text" name="_replyto" placeholder="Enter your name">
+                    <input class="name" type="text" placeholder="Enter your name">
 
                     <div class="text-white mt-2">Email Address</div>
-                    <input class="email" autofocus type="email" name="_replyto" placeholder="Enter your email">
+                    <input autofocus type="email" name="_replyto" placeholder="Enter your email" class="email">
 
                     <div class="text-white mt-2">Message</div>
-                    <textarea name="message" class="message" rows="4" placeholder="Enter your message"></textarea>
+                    <textarea name="message" rows="4" placeholder="Enter your message" class="message"></textarea>
 
-                    <button name="submit" type="submit" class="btn-submit">Submit</button>
+                    <button name="submit1" type="submit" class="btn-submit">Submit</button>
                   </form>
 
                   <div class="sns-box">
