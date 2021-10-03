@@ -406,6 +406,20 @@ footer.scrolldown {
   margin-left: 800px;
 }
 
+.video-movie {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  margin: 0px auto;
+  position: relative;
+}
+
+.video-movie > video {
+  width: 80%;
+}
+
 /*-----------------------------------section-3 스킬--------------------------------------------*/
 .section-3-bg {
   width: 1920px;
@@ -498,7 +512,7 @@ footer.scrolldown {
 
 .progress > ul > li > .text {
   font-family: 'Noto Sans KR';
-  font-size:18px;
+  font-size:15px;
   text-align:center;
 }
 
@@ -508,7 +522,7 @@ footer.scrolldown {
 }
 
 .chart > strong {
-  font-size: 25px;
+  font-size: 22px;
   position:absolute;
   top:50%;
   left:50%;
@@ -526,13 +540,34 @@ footer.scrolldown {
 
 /*-----------------------------------section-4 인트로--------------------------------------------*/
 .section-4 {
-  background-image:url('https://i.postimg.cc/Gpt8wb86/image-121.png');
-  background-repeat:no-repeat;
-  background-size:contain;
-  background-attachment: fixed !important;
-  height:1500px;
-  background-position:center;
+  display: flex;
+  align-items: center;
+}
+
+.video-count {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  margin: 0px auto;
   position: relative;
+}
+
+.video-count > span {
+  font-size: 60px;
+  left:50%;
+  top:50%;
+  transform:translate(-50%, -50%);
+  position: absolute;
+  border:2px solid black;
+  
+}
+
+.video-count > span:hover {
+  color:white;
+  border-color: white;
 }
 
 /*-----------------------------------section-5 포트폴리오--------------------------------------------*/
@@ -562,16 +597,21 @@ footer.scrolldown {
 
 .pf-slide-img {
   margin-left: 131px;
-  width: 370px;
+  width: 600px;
+}
+
+.pf-slide-img:hover::after {
+  content: "좌측 버튼을 클릭해주세요!";
+  font-family: 'Noto sans';
 }
 
 .pf-slide-maintext-t {
-  font-size: 50px;
+  font-size: 45px;
   transform-origin:0 0;
   transform:rotate(90deg);
   width: 0px;
   white-space:nowrap;
-  margin-left:80px;
+  margin-left:72px;
 }
 
 .pf-slide-maintext-b {
@@ -583,38 +623,44 @@ footer.scrolldown {
   display:flex;
   flex-direction:column;
   justify-content:center;
-  align-items:center;
-  padding-right:270px;
+  align-items:flex-start;
+  padding-left: 50px;
 }
 
 .pf-text-box > span {
-  font-size:20px;
+  line-height: 35px;
+  height: 100px;
+  font-size:17px;
   font-family: 'Noto Sans KR';
 }
 
-.btn-view {
-  font-size:23px;
-  border:1px solid #B3866F;
-  padding:8px 20px;
-  color:#B3866F;
+.btn-view,
+.btn-viewprocess {
+  font-size:18px;
+  border:1px solid #e0b6a1;
+  padding:5px 0px;
+  width: 140px;
+  text-align: center;
+  color:#e0b6a1;
   margin-top: 20px;
 }
 
-.btn-view:hover {
-  background-color: #B3866F;
+.btn-view:hover,
+.btn-viewprocess:hover {
+  background-color: #e0b6a1;
   color:white;
 }
 
 .btn-prev {
   top:45%;
-  left:100px;
+  left:200px;
   cursor:pointer;
   z-index:10;
 }
 
 .btn-next {
   top:45%;
-  right:100px;
+  right:400px;
   cursor:pointer;
   z-index:10;
 }
@@ -802,28 +848,38 @@ footer.scrolldown {
 .btn-submit {
   padding:5px 8px;
   width: 120px;
-  background-color: white;
-  color:black;
+  border:1px solid white;
+  color:white;
   margin-left: auto;
-  border-radius:20px;
   margin-top: 25px;
   transition:box-shadow .05s;
 }
 
 .btn-submit:hover {
-  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 50px #fff;
+  background-color: #fff;
+  color: #000;
 }
 
 .sns-box {
-  width: 200px;
+  width: 400px;
   height: 40px;
   position:absolute;
   bottom:-10px;
   left:0;
+  
+  line-height: 30px;
 }
 
-.sns-box > ul > li:hover > a > img {
-  transform:scale(1.2);
+.sns-box > ul > li > a {
+  font-size: 14px;
+  color:white;
+  border:1px solid white;
+  padding: 2px 10px;
+}
+
+.sns-box > ul > li:hover > a {
+  background-color: #fff;
+  color:black;
 }
 
 .together {
