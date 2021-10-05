@@ -281,3 +281,25 @@ function ArtworkSlider__init() {
   });
 }
 ArtworkSlider__init();
+
+// process popup
+function Popup__init() {
+  $('.h-process-btn').click(function() {
+    $('html, body').addClass('active');
+    $('.popup').addClass('active');
+  });
+
+  $('.popup-close-btn').click(function() {
+    $('.popup').removeClass('active');
+    $('html').removeClass('active');
+  });
+
+  $('.popup').click(function() {
+    $('.popup').removeClass('active');
+  });
+
+  $('.popup-content').click(function() {
+    return false;
+  });
+}
+Popup__init();
