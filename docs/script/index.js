@@ -1,5 +1,13 @@
 console.clear();
 
+// 메인페이지 사진 변경 슬라이드
+jQuery(document).ready(function() {
+  var SlideNumber = 0;
+  setInterval(function() {
+  $('.slide-box').attr('data-index', ++SlideNumber % 3);
+  }, 3000);
+});
+
 // form 연락망
 function sendEmailForm(form) {
   if ( form._replyto.value.length == 0 ) {
