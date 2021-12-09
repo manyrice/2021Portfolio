@@ -4,7 +4,7 @@ console.clear();
 jQuery(document).ready(function() {
   var SlideNumber = 0;
   setInterval(function() {
-  $('.slide-box').attr('data-index', ++SlideNumber % 3);
+  $('.slide-container').attr('data-index', ++SlideNumber % 3);
   }, 3000);
 });
 
