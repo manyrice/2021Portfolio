@@ -489,8 +489,10 @@ footer.scrolldown {
 }
 
 .info {
-  width: 275px;
-  margin-bottom: 72px;
+  border:1px solid red;
+  width: 200px;
+  margin-bottom: 80px;
+  margin-top: 18px;
 }
 
 .license {
@@ -573,31 +575,29 @@ footer.scrolldown {
 }
 
 /*-----------------------------------section-3 스킬--------------------------------------------*/
-.section-3-bg {
-  width: 1920px;
-  background-image: url(../images/section-3-bg.png);
-  background-repeat: no-repeat;
-  background-size: 1920px 1616px;
-}
+
 
 .skills {
   width: 386px;
-  height: 237px;
+  height: 130px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   padding-right: 30px;
-  padding-bottom: 15px;
+  margin-bottom: 30px;
 }
 
-.sk-main-left,
+.sk-main-left {
+  width: 570px;
+}
+
 .sk-main-right {
-  width: 384px;
-  height: 1146px;
+  width: 300px;
 }
 
 .sk-main-left>ul {
-  height: 616px;
+  margin-top: 70px;
+  height: 520px;
 }
 
 /* svg 글자써지는 애니메이션 */
@@ -633,21 +633,16 @@ footer.scrolldown {
 /* 프로그레스바 */
 .sk-main-center {
   width: 1150px;
-  height: 1146px;
   display: flex;
   justify-content: center;
-  position: relative;
 }
 
 .progress>ul {
-  width: 812px;
-  height: 740px;
+  width: 800px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: absolute;
-  left: 50%;
-  top: 200px;
   transform: translatex(-50%);
 }
 
