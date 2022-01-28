@@ -172,8 +172,6 @@ border-radius: 20px;
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-
-
 /* fullpage navigation 커스텀 시작 */
 #fp-nav {
   width: 150px;
@@ -641,7 +639,8 @@ footer.scrolldown {
 
 .pf-slide>.swiper-container {
   /* 높이 안주면 커튼이 짤림 (이유모름) */
-  height: 750px;
+  height: 800px;
+  padding-bottom: 100px;
   padding-left: 200px;
 }
 
@@ -933,7 +932,7 @@ footer.scrolldown {
 }
 
 .together {
-  top: 160px;
+  top: 130px;
   left: 950px;
   filter:invert(100%);
   animation: dungdung2 .7s none infinite alternate;
@@ -941,10 +940,10 @@ footer.scrolldown {
 
 @keyframes dungdung2 {
   0% {
-    top: 160px;
+    top: 145px;
   }
 
   100% {
-    top: 140px;
+    top: 130px;
   }
 }
