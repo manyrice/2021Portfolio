@@ -176,8 +176,8 @@ border-radius: 20px;
 
 /* fullpage navigation 커스텀 시작 */
 #fp-nav {
-  width: 100px;
-  height: 350px;
+  width: 150px;
+  height: 250px;
   display: flex;
   justify-content: center;
 }
@@ -188,11 +188,15 @@ border-radius: 20px;
   justify-content: space-around;
 }
 
+#fp-nav ul li .fp-tooltip {
+  color:black;
+}
+
 #fp-nav>ul>li>a>span:nth-child(2) {
   border: 1px solid black;
-  background-color: rgba(255, 255, 255, 0.2);
-  width: 28px;
-  height: 28px;
+  background-color: #fff;
+  width: 22px;
+  height: 22px;
   transform: rotate(60deg);
   border-radius: 0px;
 }
@@ -204,22 +208,15 @@ border-radius: 20px;
 #fp-nav>ul>li>a>span:nth-child(2):hover {
   border: 1px solid black;
   background-color: transparent;
-  width: 28px;
-  height: 28px;
+  width: 25px;
+  height: 25px;
   border-radius: 0px;
 }
 
 #fp-nav>ul>li>a.active>span:nth-child(2) {
-  width: 28px;
-  height: 28px;
-  border-radius: 0px;
+  width: 25px;
+  height: 25px;
   background: linear-gradient(92.27deg, rgba(0, 0, 0, 0) -0.24%, #000000 100.4%);
-}
-
-#fp-nav>ul>li>a.active>span:nth-child(2):hover {
-  width: 28px;
-  height: 28px;
-  border-radius: 0px;
 }
 
 /* fullpage navigation 커스텀 끝 */
@@ -390,7 +387,7 @@ footer.scrolldown {
 
 /*-----------------------------------section-2 어바웃미--------------------------------------------*/
 .aboutme {
-  padding-top: 10px;
+  padding-top: 20px;
   padding-left: 100px;
   padding-bottom: 50px;
 }
@@ -489,7 +486,6 @@ footer.scrolldown {
 }
 
 .info {
-  border:1px solid red;
   width: 200px;
   margin-bottom: 80px;
   margin-top: 18px;
@@ -523,63 +519,16 @@ footer.scrolldown {
 
 .drawing-img {
   left: -230px;
-  bottom: -100px;
+  bottom: -120px;
 }
 
 .am-margin {
   height: 1000px;
 }
-
-.saying1 {
-  height: 600px;
-}
-
-.pencil {
-  left: 70%;
-  top: 43%;
-  animation: pencil .6s infinite alternate;
-}
-
-@keyframes pencil {
-  0% {
-    transform: rotate(5deg);
-  }
-
-  100% {
-    transform: rotate(-15deg);
-  }
-}
-
-.saying1>img {
-  width: 928px;
-}
-
-.saying2>img {
-  width: 611px;
-  margin-top: -100px;
-  margin-left: 800px;
-}
-
-.video-movie {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 600px;
-  overflow: hidden;
-  margin: 0px auto;
-  position: relative;
-}
-
-.video-movie>video {
-  width: 80%;
-}
-
 /*-----------------------------------section-3 스킬--------------------------------------------*/
-
-
 .skills {
   width: 386px;
-  height: 130px;
+  height: 110px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -596,8 +545,8 @@ footer.scrolldown {
 }
 
 .sk-main-left>ul {
-  margin-top: 70px;
-  height: 520px;
+  margin-top: 85px;
+  height: 572px;
 }
 
 /* svg 글자써지는 애니메이션 */
@@ -638,7 +587,7 @@ footer.scrolldown {
 }
 
 .progress>ul {
-  width: 800px;
+  width: 850px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -648,7 +597,7 @@ footer.scrolldown {
 
 .progress>ul>li {
   display: flex;
-  height: 160px;
+  height: 180px;
   justify-content: space-between;
   align-items: center;
 }
@@ -659,7 +608,7 @@ footer.scrolldown {
 
 .progress>ul>li>.text {
   font-family: 'Noto Sans KR';
-  font-size: 15px;
+  font-size: 17px;
   text-align: center;
 }
 
@@ -681,26 +630,8 @@ footer.scrolldown {
   font-size: 27px;
 }
 
-
-/*-----------------------------------section-4 인트로--------------------------------------------*/
-/* .section-4 {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) -0.24%, #000000 100.4%);
-}
-
-.section-4>div {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.section-4>div>* {
-  width: 1000px;
-} */
-
 /*-----------------------------------section-5 포트폴리오--------------------------------------------*/
 .portfolio {
-  color: white;
   width: 350px;
   height: 150px;
   display: flex;
@@ -710,17 +641,14 @@ footer.scrolldown {
 
 .pf-slide>.swiper-container {
   /* 높이 안주면 커튼이 짤림 (이유모름) */
-  height: 800px;
+  height: 750px;
+  padding-left: 200px;
 }
 
 .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.pf-slide>* {
-  color: white;
 }
 
 .pf-slide-img {
@@ -780,17 +708,21 @@ footer.scrolldown {
 }
 
 .btn-prev {
-  top: 45%;
-  left: 200px;
+  top: 40%;
+  left: 250px;
   cursor: pointer;
+  width: 100px;
   z-index: 10;
+  filter:invert(100%);
 }
 
 .btn-next {
-  top: 45%;
-  right: 400px;
+  top: 40%;
+  width: 90px;
+  right: 250px;
   cursor: pointer;
   z-index: 10;
+  filter:invert(100%);
 }
 
 .btn-prev:hover,
@@ -832,7 +764,6 @@ footer.scrolldown {
 
 /*-----------------------------------section-6 아트웍--------------------------------------------*/
 .artwork {
-  color: white;
   width: 395px;
   height: 198px;
   display: flex;
@@ -862,11 +793,6 @@ footer.scrolldown {
 .ending-box {
   width: 100%;
   height: 100vh;
-  border: 3px solid black;
-}
-
-.ending-box>* {
-  color: white;
 }
 
 .ending-box>.title {
@@ -878,14 +804,12 @@ footer.scrolldown {
 .ending-box>div>ul>li:hover {
   cursor: pointer;
   text-shadow:
-    0 0 7px #fff,
-    0 0 10px #fff,
-    0 0 21px #fff,
-    0 0 42px #fff,
-    0 0 82px #fff,
-    0 0 92px #fff,
-    0 0 102px #fff,
-    0 0 151px #fff;
+    0 0 7px rgb(247, 255, 179),
+    0 0 10px rgb(247, 255, 179),
+    0 0 82px rgb(247, 255, 179),
+    0 0 92px rgb(247, 255, 179),
+    0 0 102px rgb(247, 255, 179),
+    0 0 151px rgb(247, 255, 179);
 }
 
 .ending-box>div {
@@ -899,15 +823,14 @@ footer.scrolldown {
 
 /*-----------------------------------section-8 컨택트--------------------------------------------*/
 .section-8-bg {
-  height: 100vh;
+  /* height: 100vh;
   background-image: url(../images/contact-bg.png);
   background-repeat: no-repeat;
   background-size: 1920px 1280px;
-  background-position: center;
+  background-position: center; */
 }
 
 .contact {
-  color: white;
   width: 360px;
   height: 150px;
   display: flex;
@@ -916,10 +839,9 @@ footer.scrolldown {
 }
 
 .contact-box {
-  height: 800px;
+  height: 750px;
   display: flex;
   justify-content: center;
-  align-content: center;
 }
 
 .contact-slate {
@@ -1013,6 +935,7 @@ footer.scrolldown {
 .together {
   top: 160px;
   left: 950px;
+  filter:invert(100%);
   animation: dungdung2 .7s none infinite alternate;
 }
 
