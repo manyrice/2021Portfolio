@@ -128,7 +128,7 @@ function Fullpage__init() {
       lineCap: 'round',
       thickness: 15,
       fill: {
-        gradient: ['#A6FDD6', '#31A8FF']
+        gradient: ['#000']
       }
     })
     .on(
@@ -145,7 +145,7 @@ function Fullpage__init() {
       lineCap: 'round',
       thickness: 15,
       fill: {
-        gradient: ['#FF9E01', '#FFF501']
+        gradient: ['#000']
       }
     })
     .on(
@@ -162,7 +162,7 @@ function Fullpage__init() {
       lineCap: 'round',
       thickness: 15,
       fill: {
-        gradient: ['#E062FF', '#6BE6B5']
+        gradient: ['#000']
       }
     })
     .on(
@@ -179,7 +179,7 @@ function Fullpage__init() {
       lineCap: 'round',
       thickness: 15,
       fill: {
-        gradient: ['#FF4D00', '#FFD701']
+        gradient: ['#000']
       }
     })
 

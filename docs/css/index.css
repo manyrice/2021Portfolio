@@ -235,8 +235,8 @@ header {
   padding-left: 60px;
 }
 
-.h-logo:hover {
-  filter: drop-shadow(5px 5px 1px gray);
+.h-logo img{
+  height: 50px;
 }
 
 /* process 버튼 */
@@ -248,8 +248,8 @@ header {
 }
 
 .h-process-btn>a>img {
-  width: 64px;
-  height: 64px;
+  width: 50px;
+  height: 50px;
   z-index: 1;
   animation: FilmRotate 5s linear infinite;
   transform: rotate(0);
@@ -267,7 +267,7 @@ header {
   position: absolute;
   width: 0;
   height: 12px;
-  top: 50px;
+  top: 37px;
   left: 43px;
   background-color: #383D3F;
   transition: width 1s;
@@ -278,7 +278,7 @@ header {
 }
 
 .h-process-btn>a:hover>span::after {
-  width: 100px;
+  width: 50px;
 }
 
 /* main-img */
@@ -298,7 +298,7 @@ header {
   font-size: 43px;
   line-height: 56px;
   top: 63px;
-  left: 40px;
+  left: 35px;
   z-index: 1;
 }
 
@@ -309,9 +309,8 @@ header {
 
 .plustext2 {
   font-size: 43px;
-  line-height: 48px;
-  bottom: 130px;
-  right: -50px;
+  bottom: 140px;
+  right: -45px;
   z-index: 1;
 }
 
@@ -391,9 +390,9 @@ footer.scrolldown {
 
 /*-----------------------------------section-2 어바웃미--------------------------------------------*/
 .aboutme {
-  padding-top: 100px;
+  padding-top: 10px;
   padding-left: 100px;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
 }
 
 .am-img-box {
@@ -521,8 +520,8 @@ footer.scrolldown {
 }
 
 .drawing-img {
-  left: -180px;
-  bottom: -130px;
+  left: -230px;
+  bottom: -100px;
 }
 
 .am-margin {
@@ -681,18 +680,15 @@ footer.scrolldown {
   left: 50%;
   transform: translate(-50%, -50%);
   transition: font-size .3s;
-  color: #454545;
 }
 
 .chart:hover>strong {
-  font-size: 30px;
-  color: black;
-  filter: drop-shadow(5px 5px 1px #C4C4C4);
+  font-size: 27px;
 }
 
 
 /*-----------------------------------section-4 인트로--------------------------------------------*/
-.section-4 {
+/* .section-4 {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) -0.24%, #000000 100.4%);
 }
 
@@ -705,7 +701,7 @@ footer.scrolldown {
 
 .section-4>div>* {
   width: 1000px;
-}
+} */
 
 /*-----------------------------------section-5 포트폴리오--------------------------------------------*/
 .portfolio {
@@ -999,12 +995,11 @@ footer.scrolldown {
 }
 
 .sns-box {
-  width: 400px;
+  width: 138px;
   height: 40px;
   position: absolute;
   bottom: -10px;
   left: 0;
-
   line-height: 30px;
 }
 
